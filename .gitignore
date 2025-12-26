@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+dist/
+dist_app_v2/
+build/
+*.log
+*.txt
+
+# Executables and builds
+*.exe
+*.msi
+*.zip
+*.spec
+release/
+win-unpacked/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Arduino related
+*.hex
+*.elf
+*.o
+arduino-cli/

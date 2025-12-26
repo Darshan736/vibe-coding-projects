@@ -1,0 +1,83 @@
+{
+  "name": "ai-arduino-ide",
+  "productName": "AI Arduino IDE",
+  "author": "Aireduino Team",
+  "description": "AI Powered Arduino IDE",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": ".",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none npm run dev\" \"wait-on http://localhost:5173 && cross-env ELECTRON_START_URL=http://localhost:5173 electron .\"",
+    "electron:build": "vite build && electron-builder",
+    "build:backend": "cd ../backend && pyinstaller --onefile --name backend --clean main.py",
+    "package:win": "npm run build:backend && npm run electron:build -- --win"
+  },
+  "build": {
+    "appId": "com.aireduino.ide",
+    "productName": "AI Arduino IDE",
+    "directories": {
+      "output": "dist_app_v2"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend/dist/backend.exe",
+        "to": "backend/backend.exe"
+      },
+      {
+        "from": "../backend/tools",
+        "to": "backend/tools"
+      }
+    ],
+    "win": {
+      "target": [
+        "dir"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "axios": "^1.13.2",
+    "framer-motion": "^12.23.26",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "serialport": "^13.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^7.2.4",
+    "wait-on": "^9.0.3"
+  }
+}
