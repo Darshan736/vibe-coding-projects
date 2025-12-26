@@ -1,4 +1,4 @@
-# Arduino AI IDE (Aireduino)
+# Arduino AI IDE 
 
 [![Download](https://img.shields.io/badge/Download-Latest_for_Windows-blueviolet?style=for-the-badge&logo=windows)](https://github.com/Darshan736/vibe-coding-projects/releases/latest)
 
@@ -57,5 +57,4 @@ To get started immediately, you can download the latest version from our [Releas
 -   `backend/`: FastAPI server + Python Agents.
 -   `docs/`: Architecture diagrams.
 
----
-*Built by Antigravity Design Team*
+
