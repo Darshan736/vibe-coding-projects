@@ -46,5 +46,4 @@ A next-generation, AI-powered IDE for Arduino Uno and Nano, featuring "Cursor-li
 -   `backend/`: FastAPI server + Python Agents.
 -   `docs/`: Architecture diagrams.
 
----
-*Built by Antigravity Design Team*
+
