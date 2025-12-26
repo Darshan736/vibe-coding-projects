@@ -1,10 +1,21 @@
 # Arduino AI IDE (Aireduino)
 
+[![Download](https://img.shields.io/badge/Download-Latest_for_Windows-blueviolet?style=for-the-badge&logo=windows)](https://github.com/Darshan736/vibe-coding-projects/releases/latest)
+
 A next-generation, AI-powered IDE for Arduino Uno and Nano, featuring "Cursor-like" intelligence and "Anti-Gravity" aesthetics.
 
 ## 🚀 Getting Started
 
-### Prerequisites
+To get started immediately, you can download the latest version from our [Releases page](https://github.com/Darshan736/vibe-coding-projects/releases/latest).
+
+### ⬇️ Download & Install (Easiest)
+1. Go to the [Latest Release](https://github.com/Darshan736/vibe-coding-projects/releases/latest).
+2. Download `AI-Arduino-IDE-Windows.zip`.
+3. Extract the zip file and run `AI Arduino IDE.exe`.
+
+---
+
+### 🛠️ Developer Setup (Run from Source)
 - Node.js & npm
 - Python 3.8+
 - Arduino CLI (optional, mocked by default)
