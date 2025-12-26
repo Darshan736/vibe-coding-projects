@@ -1,4 +1,4 @@
-# Arduino AI IDE (Aireduino)
+# Aireduino AI IDE 
 
 A next-generation, AI-powered IDE for Arduino Uno and Nano, featuring "Cursor-like" intelligence and "Anti-Gravity" aesthetics.
 
